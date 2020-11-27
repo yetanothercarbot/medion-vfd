@@ -22,4 +22,4 @@ The display does not output anything, so it can safely be left disconnected. I'm
 The serial port is opened at 9600 baud with 1 stopbit (the default settings for pyserial).
 
 # Advanced Use
-Refer to PROTOCOL.md
+Refer to [PROTOCOL.md](PROTOCOL.md)

@@ -17,7 +17,7 @@ The connector (Molex 70107-series) has four pins, the first of one can be identi
 | 3   | Black  | Gnd      | Ground           |
 | 4   | White  | RX       | USB-to-serial TX |
 
-The display does not output anything, so it can safely be left disconnected. I'm not sure whether the data lines are 5v or 3v3, however my CP2102 board outputs 3v3 and the display seems to work fine.
+The display does not output anything, so its TX can safely be left disconnected. I'm not sure whether the data lines are 5v or 3v3, however my CP2102 board outputs 3v3 and the display seems to work fine.
 
 The serial port is opened at 9600 baud with 1 stopbit (the default settings for pyserial).
 

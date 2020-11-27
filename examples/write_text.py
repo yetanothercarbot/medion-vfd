@@ -7,7 +7,7 @@ s_send_data = struct.Struct('b b b b')
 
 # Clear screen
 data_format = struct.Struct("b b")
-commands = (0x1B, 0x52)
+commands = (0x1B, 0x50)
 command_packed_data = data_format.pack(*commands)
 ser.write(command_packed_data)
 input() # Wait for enter

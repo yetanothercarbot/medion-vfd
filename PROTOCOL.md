@@ -77,4 +77,4 @@ Example icons and animations can be found in examples/graphical.py.
 - To hide clock, write text to the screen
 
 ### Other notes
-- Built-in demo snow/rain effect 
+- `0x1B 0x54`: Built-in demo snow/rain effect - can only be quit with a reset.

@@ -1,10 +1,8 @@
 #!/usr/bin/python3
+# This script will trigger the controller's built-in demo mode which has a 
+# rain/snow type effect, and end it when the script is exited.
 
-# This script will enable and disable each of the graphical
-# segments below the text elements. The command for each individual
-# segment can be found in PROTOCOL.md
-
-import argparse, serial, time, sys
+import argparse, serial, sys
 
 parser = argparse.ArgumentParser(description="Show built-in animations")
 parser.add_argument("-p", "--port", default="/dev/ttyUSB0")
@@ -19,11 +17,12 @@ except serial.serialutil.SerialException:
 
 # Start off by resetting the controller
 ser.write(bytearray([0x1F]))
+ser.write(bytearray([0x1B, 0x54]))
 
-while True:
-	for i in range(29):
-		ser.write(bytearray([0x1B, 0x30, i, 4]))
-		time.sleep(0.1)
-	for i in range(29):
-		ser.write(bytearray([0x1B, 0x30, i, 0]))
-		time.sleep(0.1)
+print("Displaying display's built-in demo. Press ^C to exit...")
+
+try:
+  while True:
+    pass
+except KeyboardInterrupt:
+  ser.write(bytearray([0x1F]))

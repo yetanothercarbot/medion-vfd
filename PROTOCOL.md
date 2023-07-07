@@ -6,7 +6,11 @@ The serial port needs to be opened with 9600,N,N,1.
 Any text sent to the serial port will immediately show up on the display. When the display is full (32 chars), it will clear the screen and place the character back at the beginning.
 
 ## Commands
-All commands begin with the escape code 0x1B, followed by 1-8 bytes of further commands.
+All commands - with the exception of reset - begin with the escape code 0x1B, followed by 1-8 bytes of further commands.
+
+### Reset
+- `0x1F`: Resets state and clears display. 
+
 ### Text commands
 - `0x1B 0x50`: Clear Display (see examples/write_text.py)
 - `0x1B 0x51`: CR (return cursor to first character)
@@ -73,4 +77,4 @@ Example icons and animations can be found in examples/graphical.py.
 - To hide clock, write text to the screen
 
 ### Other notes
-The readme in [spacerace's repository](https://github.com/spacerace/m18st05) notes that there is a demo which shows snow on the text segments. Unfortunately, the protocol.txt file in their repo is empty, and I wasn't able to find the snow effect myself.
+- Built-in demo snow/rain effect 

@@ -12,9 +12,10 @@ The QFP IC on back is labelled as being from Futaba, however it is not possible 
 The exact markings can be read in the images.
 
 # Prior Art
-- [spacerace/m18st05](https://github.com/spacerace/m18st05): The first repository that shows up. While the included software didn't work for me (the escape codes were being printed on screen for some reason), it was still very useful to be able to see the commands for clearing text.
+- [spacerace/m18st05](https://github.com/spacerace/m18st05): The first repository that shows up. While the included software didn't work for me, it was still very useful to be able to see the commands for clearing text.
 - [hit-karlrsuhe.de](http://www.hit-karlsruhe.de/aol2mime/medion_md_8800_vfd.htm): A fairly complete listing of the control codes. This formed the basis of PROTOCOL.md.
 - [pipperr.de](https://www.pipperr.de/dokuwiki/doku.php?id=python:python_write_serial_com_port): Example code for Python 2.x. While I wasn't able to get this example code to run under Python 3, it was still useful to see the approach taken. Structs are also being used in my example code as a result.
+- [LCDproc's MD-8800 driver](https://github.com/lcdproc/lcdproc/blob/master/server/drivers/MD8800.c): This is the driver used in the lcdproc software, and was useful for filling in the gaps left by the other sources.
 
 # Basic Use
 The connector ([Molex 70107 series](https://www.molex.com/molex/search/partSearch?query=70107)) has four pins, the first of one can be identified by a 1 and an arrow on the side opposite to the clip:
